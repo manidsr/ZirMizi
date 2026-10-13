@@ -1,6 +1,10 @@
-from .fa import MESSAGES as FA
+from .fa import MESSAGES as _FA_BASE
+from .fa_market import MESSAGES as _FA_MARKET
 
 DEFAULT_LANG = "fa"
+
+# fa_market.py is merged on top of fa.py (it also overrides `wallet_balance`).
+FA = {**_FA_BASE, **_FA_MARKET}
 
 _CATALOGS: dict[str, dict[str, str]] = {
     "fa": FA,

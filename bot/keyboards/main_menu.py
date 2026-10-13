@@ -9,6 +9,7 @@ def main_menu_kb() -> ReplyKeyboardMarkup:
         keyboard=[
             [KeyboardButton(text=t("btn_buy_food")), KeyboardButton(text=t("btn_sell_food"))],
             [KeyboardButton(text=t("btn_wallet")), KeyboardButton(text=t("btn_account"))],
+            [KeyboardButton(text=t("btn_my_orders"))],
         ],
         resize_keyboard=True,
     )
